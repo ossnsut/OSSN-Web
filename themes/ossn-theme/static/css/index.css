@@ -1,0 +1,64 @@
+#main>.post+.post {
+    margin-top: 2rem;
+}
+
+#main>.post>h2 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#main>.post>h2>time {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+#main>.post>.content {
+    padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    #main>.post>div {
+        margin-left: 2rem;
+    }
+}
+
+#logo-banner {
+    line-height: 1;
+    margin-top: 8rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1a1a1a;
+    height: 40vh;
+}
+
+#logo-banner p {
+    border: #1a1a1a 2px solid;
+    border-radius: .5rem;
+    font-weight: normal;
+    font-size: 7rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+#logo-banner span {
+    position: relative;
+    bottom: .25rem;
+}
+
+#logo-banner i {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.font-stretch {
+    display: inline-block;
+    -webkit-transform: scaleX(.95);
+    -moz-transform: scaleX(.95);
+    -ms-transform: scaleX(.95);
+    -o-transform: scaleX(.95);
+    transform: scaleX(.95);
+}

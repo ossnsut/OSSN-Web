@@ -1,0 +1,13 @@
+<header id="header">
+  {{if .Kind | eq "home"}}
+
+  {{partial "header/navbar.html" .}}
+  {{partial "header/logo-banner.html" .}}
+
+  {{else}}
+
+  {{partial "header/logo.html" .}}
+  {{partial "header/navbar.html" .}}
+
+  {{end}}
+</header>

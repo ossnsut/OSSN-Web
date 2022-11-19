@@ -1,0 +1,17 @@
+<footer id="footer">
+  <div class="footnote">
+    <span>{{ .Site.Params.footnote | safeHTML }}</span>
+  </div>
+
+  <div>
+    <span>&copy; {{ .Site.Params.since }}</span> -
+    <span>{{ now.Format "2006"}}</span>
+  </div>
+
+  {{/*
+  <div>
+    <span>Powered by </span>
+    <a class="link" href="https://gohugo.io/">Hugo</a>
+  </div>
+  */}}
+</footer>
