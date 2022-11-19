@@ -1,6 +1,6 @@
 # Configuration https://gohugo.io/getting-started/configuration 
 
-baseURL = "https://ossnsut.ml/"           # website root path
+# baseURL = "https://ossnsut.ml/"           # website root path
 disqusShortname = ""                      # disqus shortcode
 enableGitInfo = false                     # retrieve last modified date from git commits
 enableRobotsTXT = true                    # /robots.txt
