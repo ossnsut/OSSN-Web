@@ -66,10 +66,16 @@
 
 /* global */
 
+:root {
+    --link-color: #AA0000;
+    --font-color: #121212;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: var(--font-color);
 }
 
 a {
@@ -94,7 +100,7 @@ time {
 }
 
 .link {
-    color: #AA0000;
+    color: var(--link-color);
     text-decoration: underline;
 }
 
@@ -187,9 +193,14 @@ time {
     display: flex;
     font-size: .9rem;
     flex-direction: column;
-    ;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
 }
 
 #footer>.footnote {
     text-align: center;
+}
+
+#footer :last-child {
+    margin-top: 1rem;
 }

@@ -1,7 +1,7 @@
 +++
-author = "Hugo Authors"
+author = "OSSN Authors"
 title = "Markdown Syntax Guide"
-date = "2019-03-11"
+date = "2020-11-20"
 description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 tags = [
     "markdown",
@@ -60,15 +60,15 @@ The blockquote element represents content that is quoted from another source, op
 
 Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
 
-   Name | Age
---------|------
-    Bob | 27
-  Alice | 23
+   | Name  | Age |
+   | ----- | --- |
+   | Bob   | 27  |
+   | Alice | 23  |
 
 #### Inline Markdown within tables
 
 | Italics   | Bold     | Code   |
-| --------  | -------- | ------ |
+| --------- | -------- | ------ |
 | *italics* | **bold** | `code` |
 
 ## Code Blocks

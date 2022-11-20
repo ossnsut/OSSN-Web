@@ -1,18 +1,23 @@
-#main > h1 {
+#main>h1 {
     text-align: center;
 }
 
-#main > .content {
+#main>.content {
     padding-top: 1rem;
 }
 
-#main > .warning {
+#main>.warning {
     background-color: brown;
     color: white;
     font-size: 1.1rem;
     margin: 2rem 0;
     padding: 1rem 0;
     text-align: center;
+}
+
+#main .toc-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 #main .toc {
@@ -27,7 +32,7 @@
     text-decoration: underline;
 }
 
-#main .toc li > ul {
+#main .toc li>ul {
     margin-left: 1.5rem;
 }
 
@@ -37,4 +42,8 @@
 
 #main :target {
     background-color: azure;
+}
+
+#main .footnotes {
+    margin-top: 2rem;
 }

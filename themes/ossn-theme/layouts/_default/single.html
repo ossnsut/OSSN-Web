@@ -15,7 +15,7 @@
   <div class="warning">{{ printf .Site.Params.outdated.warning $days | safeHTML }}</div>
   {{ end }}
   {{ end }}
-  <h1>{{ .Title }}</h1>
+  <h1 style="margin-bottom:1rem;">{{ .Title }}</h1>
   {{ if ne .Params.tags nil }}
   <div>
     <b>Keywords: </b>
@@ -26,7 +26,7 @@
   {{ end }}
   {{ if cond (ne .Params.toc nil) .Params.toc .Site.Params.toc }}
   {{ if ne .TableOfContents "<nav id=\"TableOfContents\"></nav>" }}
-  <details>
+  <details class="toc-wrapper">
     <summary>
       <b>Table of Contents</b>
     </summary>
@@ -58,11 +58,11 @@
     {{ template "_internal/disqus.html" . }}
     <!-- giscus -->
     {{ if .Site.Params.giscus.enable }}
-      {{ .Site.Params.giscus.script | safeHTML }}
+    {{ .Site.Params.giscus.script | safeHTML }}
     {{ end }}
     <!-- utterances -->
     {{ if .Site.Params.utterances.enable }}
-      {{ .Site.Params.utterances.script | safeHTML }}
+    {{ .Site.Params.utterances.script | safeHTML }}
     {{ end }}
   </div>
   {{ end }}
