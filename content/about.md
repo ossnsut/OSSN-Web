@@ -6,20 +6,49 @@ aliases = ["about-us", "about-ossn"]
 author = "OSSN Authors"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+OSSN was created to help students learn about open source software and to help them get involved in open source projects. We are a community of students who are passionate about open source software and want to help others learn about it.
 
-Hugo makes use of a variety of open source projects including:
+## What is Open Source?
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+In this age and time, and the environment that we live in we become ab-
+sorbed on the proprietary software that we depend upon unaware about the
+technologies it was built upon or what enables almost any Start Up to be
+brought into existence.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+Put simply open source is a way of developing software that enables any-
+one to write and change the flow of development of the software that they
+use and love without extensive and up-front planning.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+It is a rather simple mechanism1 that enables the community to work
+together to build a better, more accessible and more secure software.
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+## The goal of OSSN
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+The goal of OSSN is to create a community of students who are interested in
+open source and are able to work together to create something that is useful
+to the community.
+
+The society shall be an open platform for everyone. Anyone who is interested in open source and wants to expand their knowledge can contribute to it can join the society.
+
+While being open to everyone, the society also has an internal team that is responsible for the smooth functioning of the society which is by careful selection of the capable members.
+
+
+## Glimpses of future events
+
+Here's a list of events to get excited about:
+
+- __Workshops__  
+    - Git and GitHub
+    - Open Source Development
+    - Linux
+    - Using Vim
+    - Web Development
+    - Machine Learning
+    - Game Development
+<br/>
+
+- __Hackathons__
+
+- __Coding Talks__
+
+- __Meetups__

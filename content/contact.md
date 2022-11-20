@@ -8,3 +8,6 @@ author = "OSSN Authors"
 
 # Contact
 
+#### Have something to say or have some queries?
+
+Send us an email at [ossnsut@gmail.com](mailto:ossnsut@gmail.com) or contact us on [Instagram](https://www.instagram.com/oss.nsut/).

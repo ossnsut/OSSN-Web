@@ -5,6 +5,8 @@
 {{ define "main" }}
 <main id="main" class="archive">
 
+  <div style="margin-bottom: 2rem;"> {{ .Content }} </div>
+
   {{ $pages := where .Data.Pages "Type" "post" }}
 
   {{ range $pages.GroupByDate "2006-01" }}
