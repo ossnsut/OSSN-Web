@@ -52,3 +52,11 @@ Here's a list of events to get excited about:
 - __Coding Talks__
 
 - __Meetups__
+
+<!-- This is the first appearance of the OSSN ever. Our website is live at https://ossnsut.ml . We are still working on it. If you have any suggestions, please let us know. 
+
+In the meantime join our us by writing a blog post about your experience with open source. You can find the instructions here https://ossnsut.ml/post/ .
+
+We are also looking for volunteers to help us with the website and everything. If you are interested, please let us know.
+
+Thanks for reading. See you soon. -->
