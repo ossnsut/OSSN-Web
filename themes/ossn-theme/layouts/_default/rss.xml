@@ -37,7 +37,13 @@
       {{ if .Site.Params.fullTextRSS }}
       <description>{{ .Content | html }}</description>
       {{ else }}
+
+      {{if .Params.description }}
+      <description>{{ .Params.description }}</description>
+      {{ else }}
       <description>{{ .Summary | html }}</description>
+      {{end}}
+      
       {{ end }}
     </item>
     {{ end }}
