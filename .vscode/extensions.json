@@ -2,6 +2,6 @@
     "recommendations": [
         "budparr.language-hugo-vscode",
         "bungcip.better-toml",
-        "esbenp.prettier-vscode"
+        "davidanson.vscode-markdownlint"
     ]
 }

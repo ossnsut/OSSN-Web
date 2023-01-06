@@ -18,7 +18,7 @@ name = "OSSN"          # your name
 
 # https://gohugo.io/getting-started/configuration-markup
 [markup]
-defaultMarkdownHandler = "goldmark"
+defaultMarkdownHandler = "goldmark" # markdown parser
 [markup.goldmark.renderer]
 unsafe = true # enable html in markdown
 [markup.highlight]

@@ -10,4 +10,5 @@ author = "OSSN Authors"
 
 #### Have something to say or have some queries?
 
-Send us an email at [ossnsut@gmail.com](mailto:ossnsut@gmail.com) or contact us on [Instagram](https://www.instagram.com/oss.nsut/).
+Send us an email at [ossnsut@gmail.com](mailto:ossnsut@gmail.com) or
+contact us on [Instagram](https://www.instagram.com/oss.nsut/).
