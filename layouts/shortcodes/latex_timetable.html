@@ -1,0 +1,185 @@
+<form id="latex-generate">
+    <label for="columns">Columns:</label><br>
+    <input type="number" id="columns" name="columns" value="5"><br>
+    <label for="time_start">Time start:</label><br>
+    <input type="time" id="time_start" name="time_start" value="08:00"><br>
+    <label for="time_step">Time step:</label><br>
+    <input type="number" id="time_step" name="time_step" value="30"><br>
+    <label for="periods">Periods:</label><br>
+    <textarea id="periods" name="periods" rows="4" cols="50">
+(MA 5101 > Algebra 1) [A1-2 B2-2 D4-5]</textarea><br>
+    <input type="submit" value="Generate">
+</form>
+
+<div>
+    <br>
+    <label for="latex-output">LaTeX Output:</label><br>
+    <textarea id="latex-output" rows="8" cols="50" spellcheck="false"></textarea><br>
+</div>
+
+<!-- markdownlint-disable MD013 MD052-->
+<script>
+    const form = document.getElementById("latex-generate");
+
+    const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    const day_data = {
+        "Monday": {
+            "color": "C0C0C0",
+            "periods": [
+                // {
+                //     "name": "MA 5101",
+                //     "description": "Algebra 1",
+                //     "rooms": [[1, 2], [4, 5]]
+                // }
+            ]
+        },
+        "Tuesday": {
+            "color": "C0C0C0",
+            "periods": []
+        },
+        "Wednesday": {
+            "color": "C0C0C0",
+            "periods": []
+        },
+        "Thursday": {
+            "color": "C0C0C0",
+            "periods": []
+        },
+        "Friday": {
+            "color": "C0C0C0",
+            "periods": []
+        },
+        "Saturday": {
+            "color": "C0C0C0",
+            "periods": []
+        },
+        "Sunday": {
+            "color": "C0C0C0",
+            "periods": []
+        }
+    }
+
+    // \\newcommand{\\entry}[2]{\\begin{tabular}{c}\\\\#1\\#2\\\\ \\phantom{ }\\end{tabular}}
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+        console.log(data);
+
+        // let latexTable = `\\begin{tabular}{|>{\\columncolor[HTML]{C0C0C0}}c | c | c | c | c || c | c | c | c | c |}`;
+        let latexTable = `
+        \\begin{tabular}{|>{\\columncolor[HTML]{C0C0C0}}c |`;
+        for (let i = 0; i < data.columns; i++)
+            latexTable += ` c |`;
+
+        latexTable += `}`;
+        latexTable += `\n\\hline \\rowcolor[HTML]{C0C0C0} \n \\textbf{Time} `;
+
+        const time_start = new Date(`1970-01-01T${data.time_start}`);
+        const time_step = data.time_step;
+        for (let i = 0; i < data.columns; i++) {
+            // time row
+            // & 8:00 - 9:00  & 9:00 - 10:00
+            latexTable += ` & \\textbf{${time_start.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' })} - ${new Date(time_start.getTime() + time_step * 60000).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' })}}`;
+            time_start.setMinutes(time_start.getMinutes() + time_step);
+        }
+        latexTable += `\n\\\\ \\hline`;
+
+        // populate day_data
+        const periods = data.periods.split("\n");
+        for (const period of periods) {
+            // (MA 5101 > Algebra 1) [A3-4 B3-4 D4-5]
+            const [period_name, subtitle] = period.match(/\((.*?)\)/)[1].split(" > ");
+            console.log(period_name, subtitle);
+
+            const period_rooms = period.match(/\[(.*?)\]/)[1].split(" ");
+            for (period_room of period_rooms) {
+                // A3-4
+                const day = period_room[0];
+                const day_index = day.charCodeAt(0) - 65;
+                const [start, end] = period_room.slice(1).split("-").map(x => parseInt(x));
+                console.log(day_index, start, end);
+
+                day_data[days[day_index]]["periods"].push({
+                    "name": period_name,
+                    "description": subtitle,
+                    "rooms": [[start, end]]
+                });
+            }
+        }
+
+        const getPeriod = (day, i) => {
+            const periods = day_data[day]["periods"];
+            return periods.find(x => x["rooms"].some(y => y[0] <= i + 1 && y[1] >= i + 1));
+        }
+
+        const getCell = (title, subtitle) => {
+            // return `\\begin{tabular}{@{}c@{}}\\\\${title} \\\\ ${subtitle} \\\\ \\end{tabular}`;
+            return `\\entry{${title}}{${subtitle}}`;
+        }
+
+        // populate latexTable
+        for (let day_idx = 0; day_idx < days.length; ++day_idx) {
+            const day = days[day_idx];
+            latexTable += `\n\\rowcolor[HTML]{${day_data[day]["color"]}} \\textbf{${day}}`;
+            for (let i = 0; i < data.columns; i++) {
+                // time row
+                // & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0} \begin{tabular}{@{}c@{}}MA 5101 \\Algebra 1\end{tabular}}  & & &
+                const periods = day_data[day]["periods"];
+                let period = getPeriod(day, i);
+                if (period) {
+                    const room = period["rooms"].find(x => x[0] <= i + 1 && x[1] >= i + 1);
+                    const room_idx = room[0] - 1;
+                    const room_span = room[1] - room[0] + 1;
+                    if (room_span > 1) {
+                        latexTable += ` & \\multicolumn{${room_span}}{c|}{\\cellcolor[HTML]{${day_data[day]["color"]}} ${getCell(period["name"], period["description"])} }`;
+                        i += room_span - 1;
+                    } else {
+                        latexTable += ` & \\cellcolor[HTML]{${day_data[day]["color"]}} ${getCell(period["name"], period["description"])}`;
+                    }
+                } else {
+                    latexTable += ` & ${getCell('', '')} `;
+                }
+
+            }
+            latexTable += `\n\\\\ \\hline`;
+        }
+
+        latexTable += `\n\\end{tabular}`;
+
+        console.log(latexTable);
+        console.log(day_data);
+
+        const latexOutput = `\\documentclass{article}
+\\usepackage[utf8]{inputenc}
+\\usepackage[inline]{enumitem}
+\\usepackage[table,xcdraw]{xcolor} % for table color
+\\setlength\\parindent{0pt}
+
+\\newcommand{\\entry}[2]{\\begin{tabular}{c}\\\\#1\\\\#2\\\\\\phantom{ }\\end{tabular}}
+\\pagenumbering{gobble}
+\\usepackage{geometry}
+\\geometry{
+ landscape,
+ totalheight=140mm,
+ total={250mm,140mm},
+ left=10mm,
+ top=30mm,
+ bottom=10mm
+}
+
+\\begin{document}
+
+\\begin{center}
+
+${latexTable}
+
+\\end{center}
+
+\\end{document}
+
+`
+        document.getElementById("latex-output").value = latexOutput;
+
+    });
+</script>

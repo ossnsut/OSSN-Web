@@ -6,7 +6,7 @@ author: KorigamiK
 # lastmod - last modified
 # refer to https://discourse.gohugo.io/t/news-posts-not-showing-up-in-index-html/27561
 date: 2023-01-06
-title: An Intro to LaTeX Timetable
+title: "Creating a Timetable in LaTeX"
 description: Writing a cool looking timetable typeset in LaTeX
 tags:
   - latex
@@ -20,9 +20,10 @@ series:
     - "An Intro to LaTeX"
 aliases:
     - "latex-timetable"
-type: post
 ---
 
 ## An Intro to LaTeX: Timetable
 
 ### Introduction
+
+{{< latex_timetable >}}
