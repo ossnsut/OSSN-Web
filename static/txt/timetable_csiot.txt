@@ -1,0 +1,7 @@
+(IOT Lab > G1) [A3-4]
+(TOAFL > Theory of Automata \& Formal Languages)[A5-5 B1-1 C2-2 D7-8]
+(DC > Digital Circuits) [A9-9 B8-8 E7-8]
+(PSP > Probability \& Stochastic Processes) [A10-10 B7-7 C5-6 D3-4]
+(IOT Lab > G2) [B3-4]
+(IOT > Internet of Things)[B5-5 C8-8 D10-10]
+(OS > Operating Systems) [B6-6 C7-7 D9-9 E3-4]
