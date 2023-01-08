@@ -65,7 +65,7 @@ toc = true               # whether to enable table of contents in posts
 
 # https://giscus.app
 [params.giscus]
-enable = false # whether to enable giscus
+enable = true # whether to enable giscus
 # paste giscus' <script></script> configuration between the triple quotes
 script = """
 <script src="https://giscus.app/client.js"

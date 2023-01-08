@@ -24,6 +24,8 @@ aliases:
 
 ## An Intro to LaTeX: Timetable
 
+![CSIOT Timetable](/images/timetable_csiot.png)
+
 ### Introduction
 
 {{< latex_timetable >}}
