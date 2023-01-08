@@ -77,8 +77,7 @@ non-conflicting timetables for different classes and semesters.
 
 The basic idea is to generate a table in $\LaTeX$ procedurally
 using JavaScript. You can look at the source code of the timetable
-generator [here](https://github.com/ossn/ossn.github.io/blob/master/layouts/shortcodes/latex_timetable.html).
-
+generator [here](https://github.com/ossnsut/ossnsut.github.io/blob/main/layouts/shortcodes/latex_timetable.html).
 However as a quick overview for the beginner, here's how you can
 create tables in $\LaTeX$.
 
