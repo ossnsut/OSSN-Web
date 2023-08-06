@@ -15,7 +15,7 @@
 }
 
 .content a {
-    color: #AA0000;
+    color: var(--link-color);
     text-decoration: underline;
 }
 
@@ -50,9 +50,9 @@
 }
 
 .content code {
-    background-color: #F5F5F5;
+    background-color: var(--background-code);
     border-radius: .2rem;
-    color: #AA0000;
+    color: var(--link-color);
     font-family: 'Latin Modern Mono', Courier, monospace;
     padding: 0 .2rem;
 }
@@ -95,7 +95,7 @@
 }
 
 .content pre {
-    background-color: #F5F5F5!important;
+    background-color: var(--background-code)!important;
     border-radius: .2rem;
     font-family: 'Latin Modern Mono', Courier, monospace;
     margin-top: .5rem;
