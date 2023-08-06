@@ -71,6 +71,7 @@
     --font-color: #121212;
     --background-color: #FAFAFA;
     --background-code: #F5F5F5;
+    --target-color: azure;
 }
 
 * {
@@ -117,6 +118,7 @@ input, textarea {
     --font-color: #EDEDED;
     --background-color: #181a1b;
     --background-code: #282a2b;
+    --target-color: darkslategray;
   }
 }
 

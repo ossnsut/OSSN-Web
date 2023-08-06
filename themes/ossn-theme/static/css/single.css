@@ -21,8 +21,8 @@
 }
 
 #main .toc {
-    background-color: #EEEEEE;
-    border: black 1px dashed;
+    background-color: var(--background-code);
+    border: var(--font-color) 1px dashed;
     display: inline-block;
     margin: 1rem;
     padding: .5rem 1rem;
@@ -41,7 +41,7 @@
 }
 
 #main :target {
-    background-color: azure;
+    background-color: var(--target-color);
 }
 
 #main .footnotes {
