@@ -21,6 +21,10 @@
   <!-- favicon -->
   <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
 
+  <!-- Safari theme color -->
+  <meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: dark)">
+
   <!-- keywords -->
   {{ if .Keywords }}
   <meta name="keywords" content="{{ range $key, $value := .Keywords }} {{ $value }} {{ end }}">
