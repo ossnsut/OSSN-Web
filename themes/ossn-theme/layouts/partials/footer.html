@@ -1,11 +1,19 @@
 <footer id="footer">
 
-  <div class="contact-us"> <a href="/contact" class="link">Contact Us</a></div>
+  <div class="contact-us"> 
+    <a href="/contact" class="link">Contact Us</a>
+    |
+    <a class="link" href="javascript:toggleColorScheme();">
+      Change Theme
+    </a>
+  </div>
 
   <div class="footnote">
     <span>{{ .Site.Params.footnote | safeHTML }}</span>
   </div>
 
+
+  
 
   <div>
     <span>&copy; {{ .Site.Params.since }}</span> -

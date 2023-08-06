@@ -69,6 +69,8 @@
 :root {
     --link-color: #AA0000;
     --font-color: #121212;
+    --background-color: #FAFAFA;
+    --background-code: #F5F5F5;
 }
 
 * {
@@ -89,14 +91,33 @@ time {
     min-width: 5rem;
 }
 
+input, textarea {
+  background-color: var(--background-color);
+  border: 1px solid var(--link-color);
+  padding: .5rem;
+  border-radius: .2rem;
+  width: 100%;
+}
+
 #wrapper {
-    background-color: #FAFAFA;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     font-family: 'Latin Modern Roman', 'Times New Roman', serif;
     min-height: 100vh;
     overflow-wrap: break-word;
     padding: 1rem;
+}
+
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --link-color: #FF6666;
+    --font-color: #EDEDED;
+    --background-color: #181a1b;
+    --background-code: #282a2b;
+  }
 }
 
 .link {
@@ -134,7 +155,7 @@ time {
 
 .logo {
     font-size: 4rem;
-    border: 1px solid #121212;
+    border: 1px solid var(--font-color);
     border-radius: .2rem;
     padding-right: .2rem;
     padding-left: .2rem;

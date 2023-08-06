@@ -36,7 +36,7 @@
 }
 
 #logo-banner p {
-    border: #1a1a1a 2px solid;
+    border: var(--font-color) 2px solid;
     border-radius: .5rem;
     font-weight: normal;
     font-size: 7rem;
@@ -65,7 +65,20 @@
 }
 
 .nsut-logo {
-    float: left;
+  float: left;
+  background-image: url('/images/NSUT.png');
+  flex: 0.2;
+  height: 220px;
+  min-width: 220px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Dark mode image */
+@media (prefers-color-scheme: dark) {
+  .nsut-logo {
+    background-image: url('/images/NSUT-dark.png');
+  }
 }
 
 .abstract {
@@ -88,7 +101,7 @@
 .know-more a {
     background-color: var(--font-color);
     border-radius: .5rem;
-    color: #fff;
+    color: var(--background-color);
     display: inline-block;
     font-size: 1rem;
     padding: .5rem 1rem;

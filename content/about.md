@@ -43,19 +43,15 @@ careful selection of the capable members.
 Here's a list of events to get excited about:
 
 - __Workshops__  
-  - Git and GitHub
-  - Open Source Development
-  - Linux
-  - Using Vim
-  - Web Development
-  - Machine Learning
-  - Game Development
-<br/>
-
+    - Git and GitHub
+    - Open Source Development
+    - Linux
+    - Using Vim
+    - Web Development
+    - Machine Learning
+    - Game Development
 - __Hackathons__
-
 - __Coding Talks__
-
 - __Meetups__
 
 <!-- This is the first appearance of the OSSN ever. Our website is live at https://ossnsut.ml . We are still working on it. If you have any suggestions, please let us know. 
