@@ -6,9 +6,7 @@
     <label for="time_step">Time step:</label><br>
     <input type="number" id="time_step" name="time_step" value="30"><br>
     <label for="periods">Periods:</label><br>
-    <textarea id="periods" name="periods" rows="4"  spellcheck="false">
-(MA 5101 > Algebra 1) [A1-2 B2-2 D4-5]
-(MA 5102 > Maths 2) [A3-4 B3-4 D4-5]</textarea>
+    <textarea id="periods" name="periods" rows="4"  spellcheck="false"></textarea>
     <br> <br>
     <input type="submit" name="Generate" style="cursor: pointer" value="Generate">
 </form>
@@ -24,7 +22,7 @@
     const form = document.getElementById("latex-generate");
 
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    const colors = ["077187", "2a9d8f", "e9c46a", "f4a261", "e76f51", "9ECE9A", "E4C5AF"];
+    const colors = ["077187", "2a9d8f", "e9c46a", "f4a261", "e76f51", "9ECE9A", "E4C5AF", "BBACC1", "E8DDB5", "EEEBD0"];
     {
         {/*  const day_data = {
         "Monday": {
