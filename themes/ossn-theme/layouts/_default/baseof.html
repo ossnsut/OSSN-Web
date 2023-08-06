@@ -110,6 +110,15 @@
       else localStorage.setItem("scheme", scheme);
     }
 
+    function changeGiscusTheme(theme) {
+      function sendMessage(message) {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({ setConfig: { theme: theme }, });
+    }
+
     // Get the current scheme, and apply the opposite
     function toggleColorScheme() {
       let newScheme = "light";
@@ -117,6 +126,7 @@
       if (scheme === "light") newScheme = "dark";
       applyPreferredColorScheme(newScheme);
       savePreferredColorScheme(newScheme);
+      changeGiscusTheme(newScheme);
     }
 
     function applyPreferredColorScheme(scheme) {
@@ -146,7 +156,9 @@
         }
       }
     }
-    applyPreferredColorScheme(getPreferredColorScheme());
+    const preferredColorScheme = getPreferredColorScheme();
+    applyPreferredColorScheme(preferredColorScheme);
+    changeGiscusTheme(preferredColorScheme);
   </script>
 </body>
 
