@@ -90,15 +90,10 @@
     function getPreferredColorScheme(){
       let systemScheme = 'light';
       if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-      systemScheme = 'dark';
+        systemScheme = 'dark';
       let chosenScheme = systemScheme;
-
       if (localStorage.getItem("scheme"))
-      chosenScheme = localStorage.getItem("scheme");
-
-      if (systemScheme === chosenScheme)
-      localStorage.removeItem("scheme");
-
+        chosenScheme = localStorage.getItem("scheme");
       return chosenScheme;
     }
 
@@ -157,8 +152,10 @@
       }
     }
     const preferredColorScheme = getPreferredColorScheme();
-    applyPreferredColorScheme(preferredColorScheme);
-    changeGiscusTheme(preferredColorScheme);
+    document.addEventListener("DOMContentLoaded", () => {
+      applyPreferredColorScheme(preferredColorScheme);
+      setTimeout(() => changeGiscusTheme(preferredColorScheme), 2000);  
+    });
   </script>
 </body>
 
