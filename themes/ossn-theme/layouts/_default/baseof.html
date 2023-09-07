@@ -19,7 +19,7 @@
   {{ end }}
 
   <!-- favicon -->
-  <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
+  <link rel="icon" href="{{ .Site.Params.favicon | absURL }}" crossorigin="anonymous">
 
   <!-- Safari theme color -->
   <meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)">
@@ -53,8 +53,8 @@
   {{ template "_internal/schema.html" . }}
 
   <!-- style -->
-  <link media="screen" rel="stylesheet" href='{{ "css/common.css" | absURL }}'>
-  <link media="screen" rel="stylesheet" href='{{ "css/content.css" | absURL }}'>
+  <link media="screen" crossorigin="anonymous" rel="stylesheet" href='{{ "css/common.css" | absURL }}'>
+  <link media="screen" crossorigin="anonymous" rel="stylesheet" href='{{ "css/content.css" | absURL }}'>
 
   <!-- title -->
   {{ if .IsHome }}
@@ -78,7 +78,7 @@
 
   <!-- custom css -->
   {{ range .Site.Params.customCSS }}
-  <link media="screen" rel="stylesheet" href="{{ . | absURL }}" />
+  <link crossorigin="anonymous" media="screen" rel="stylesheet" href="{{ . | absURL }}" />
   {{ end }}
 
   <!-- custom js -->
