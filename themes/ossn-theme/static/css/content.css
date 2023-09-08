@@ -44,7 +44,7 @@
 }
 
 .content blockquote {
-    border-left: black 2px solid;
+    border-left: var(--font-color) 2px solid;
     font-style: italic;
     padding: 1rem 0 1rem 2rem;
 }
@@ -132,4 +132,13 @@
 
 .content ol, .content ul {
     margin-left: 1.5rem;
+}
+
+.content kbd {
+    background-color: var(--background-code);
+    border-radius: .2rem;
+    color: var(--link-color);
+    font-family: 'Latin Modern Mono', Courier, monospace;
+    padding: 0 .2rem;
+    border: 1px dashed var(--font-color);
 }
