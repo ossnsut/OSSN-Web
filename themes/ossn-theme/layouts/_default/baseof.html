@@ -109,7 +109,7 @@
       function sendMessage(message) {
         const iframe = document.querySelector('iframe.giscus-frame');
         if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        iframe.contentWindow?.postMessage({ giscus: message }, 'https://giscus.app');
       }
       sendMessage({ setConfig: { theme: theme }, });
     }
@@ -126,7 +126,7 @@
 
     function applyPreferredColorScheme(scheme) {
       for (var s = 0; s < document.styleSheets.length; ++s) {
-       if (document.styleSheets[s]?.href?.startsWith("https://giscus.app")) continue;
+        if (!document.styleSheets[s]?.href?.includes(window.location.origin)) continue;
         for (var i = 0; i < document.styleSheets[s].cssRules.length; i++) {
           rule = document.styleSheets[s].cssRules[i];
           if (rule && rule.media && rule.media.mediaText.includes("prefers-color-scheme")) {
