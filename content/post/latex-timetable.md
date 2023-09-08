@@ -25,7 +25,7 @@ aliases:
     - "latex-timetable"
 ---
 
-If you want to jump straight to the _timetable generator_ click [right here](#timetable-generator)
+You may want to jump straight to the [timetable generator](#timetable-generator)
 otherwise, here's some background on how I created a general
 purpose timetable generator for my class 😁
 
