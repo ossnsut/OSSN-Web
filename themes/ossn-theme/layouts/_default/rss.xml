@@ -44,8 +44,7 @@
       {{ else }}
         <description>{{ .Summary | html }}</description>
       {{end}}
-      <content:encoded>{{ .Summary | html }}</content:encoded>
-      
+
       {{ end }}
     </item>
     {{ end }}
