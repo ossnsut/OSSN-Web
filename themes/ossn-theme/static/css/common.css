@@ -162,7 +162,7 @@ html {
 .logo {
     font-size: 4rem;
     border: 1px solid var(--font-color);
-    border-radius: .2rem;
+    border-radius: .3rem;
     padding-right: .2rem;
     padding-left: .2rem;
     padding-bottom: .2rem;
