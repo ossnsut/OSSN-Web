@@ -4,4 +4,4 @@ build:
 
 dev:
 	echo "Starting development server..."
-	hugo server --contentDir=./content --disableFastRender --themesDir=./themes --noHTTPCache
+	hugo server --contentDir=./content --disableFastRender --themesDir=./themes --noHTTPCache --bind=0.0.0.0 --port=1313  $(HUGO_ARGS)
