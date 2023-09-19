@@ -64,7 +64,7 @@
     transform: scaleX(.95);
 }
 
-.nsut-logo {
+.nsut-logo path {
   fill: var(--font-color);
   float: left;
   filter: brightness(90%);
