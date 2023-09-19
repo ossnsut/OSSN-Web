@@ -6,7 +6,11 @@ author = "OSSN Authors"
 
 <div class="abstract">
 
-<div class="nsut-logo item" id="nsut-logo"></div>
+<!-- <div class="nsut-logo item" id="nsut-logo"></div> -->
+
+<div class="nsut-logo">
+    {{< nsut_logo >}}
+</div>
 
 <div class="item" style="flex:1;">
 <center style="margin-bottom: .5rem;"><h1>Abstract</h1></center>

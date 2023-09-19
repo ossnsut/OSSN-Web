@@ -65,20 +65,9 @@
 }
 
 .nsut-logo {
+  fill: var(--font-color);
   float: left;
-  background-image: url('/images/NSUT.png');
-  flex: 0.2;
-  height: 220px;
-  min-width: 220px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Dark mode image */
-@media (prefers-color-scheme: dark) {
-  .nsut-logo {
-    background-image: url('/images/NSUT-dark.png');
-  }
+  filter: brightness(90%);
 }
 
 .abstract {
