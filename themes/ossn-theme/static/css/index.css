@@ -68,6 +68,7 @@
   fill: var(--font-color);
   float: left;
   filter: brightness(90%);
+  -webkit-filter: brightness(90%);
 }
 
 .abstract {
@@ -76,6 +77,12 @@
     place-items: center;
     justify-content: center;
     gap: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    .abstract {
+        gap: 1rem;
+    }
 }
 
 .know-more {
