@@ -12,13 +12,11 @@ are passionate about open source software and want to help others learn about it
 
 ## What is Open Source?
 
-In this age and time, and the environment that we live in we become ab-
-sorbed on the proprietary software that we depend upon unaware about the
-technologies it was built upon or what enables almost any Start Up to be
+In this age and time, and the environment that we live in we become absorbed with the proprietary software that we depend upon, unaware of the
+technologies it was built upon or what enables almost any start up to be
 brought into existence.
 
-Put simply open source is a way of developing software that enables any-
-one to write and change the flow of development of the software that they
+Put simply, open source is a way of developing software that enables anyone to write and change the flow of development of the software that they
 use and love without extensive and up-front planning.
 
 It is a rather simple mechanism1 that enables the community to work
