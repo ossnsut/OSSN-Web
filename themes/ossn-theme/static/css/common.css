@@ -1,102 +1,109 @@
 /* fonts */
 
 @font-face {
-    font-display: swap;
-    font-family: 'Latin Modern Mono';
-    font-style: normal;
-    font-weight: bold;
-    src: url('../font/lmmono-bold.woff');
+  font-display: swap;
+  font-family: "Latin Modern Mono";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../font/lmmono-bold.woff");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Latin Modern Mono';
-    font-style: italic;
-    font-weight: bold;
-    src: url('../font/lmmono-bolditalic.woff');
+  font-display: swap;
+  font-family: "Latin Modern Mono";
+  font-style: italic;
+  font-weight: bold;
+  src: url("../font/lmmono-bolditalic.woff");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Latin Modern Mono';
-    font-style: italic;
-    font-weight: normal;
-    src: url('../font/lmmono-italic.woff');
+  font-display: swap;
+  font-family: "Latin Modern Mono";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../font/lmmono-italic.woff");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Latin Modern Mono';
-    font-style: normal;
-    font-weight: normal;
-    src: url('../font/lmmono-normal.woff');
+  font-display: swap;
+  font-family: "Latin Modern Mono";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/lmmono-normal.woff");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Latin Modern Roman';
-    font-style: normal;
-    font-weight: bold;
-    src: url('../font/lmroman-bold.woff');
+  font-display: swap;
+  font-family: "Latin Modern Roman";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../font/lmroman-bold.woff");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Latin Modern Roman';
-    font-style: italic;
-    font-weight: bold;
-    src: url('../font/lmroman-bolditalic.woff');
+  font-display: swap;
+  font-family: "Latin Modern Roman";
+  font-style: italic;
+  font-weight: bold;
+  src: url("../font/lmroman-bolditalic.woff");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Latin Modern Roman';
-    font-style: italic;
-    font-weight: normal;
-    src: url('../font/lmroman-italic.woff');
+  font-display: swap;
+  font-family: "Latin Modern Roman";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../font/lmroman-italic.woff");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Latin Modern Roman';
-    font-style: normal;
-    font-weight: normal;
-    src: url('../font/lmroman-normal.woff');
+  font-display: swap;
+  font-family: "Latin Modern Roman";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/lmroman-normal.woff");
+}
+
+.text-svg path,
+.text-svg use,
+.text-svg rect {
+  fill: var(--font-color);
 }
 
 /* global */
 
 :root {
-    --link-color: #AA0000;
-    --font-color: #121212;
-    --background-color: #FAFAFA;
-    --background-code: #e5e5F5;
-    --target-color: azure;
+  --link-color: #aa0000;
+  --font-color: #121212;
+  --background-color: #fafafa;
+  --background-code: #e5e5f5;
+  --target-color: azure;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: var(--font-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--font-color);
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 time {
-    color: gray;
-    margin-left: 1rem;
-    min-width: 5rem;
+  color: gray;
+  margin-left: 1rem;
+  min-width: 5rem;
 }
 
-input, textarea {
+input,
+textarea {
   background-color: var(--background-color);
   border: 1px solid var(--link-color);
-  padding: .5rem;
-  border-radius: .2rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
   width: 100%;
 }
 
@@ -105,21 +112,20 @@ html {
 }
 
 #wrapper {
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    font-family: 'Latin Modern Roman', 'Times New Roman', serif;
-    min-height: 100vh;
-    overflow-wrap: break-word;
-    padding: 1rem;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  font-family: "Latin Modern Roman", "Times New Roman", serif;
+  min-height: 100vh;
+  overflow-wrap: break-word;
+  padding: 1rem;
 }
-
 
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   :root {
-    --link-color: #FF6666;
-    --font-color: #EDEDED;
+    --link-color: #ff6666;
+    --font-color: #ededed;
     --background-color: #181a1b;
     --background-code: #282a2b;
     --target-color: darkslategray;
@@ -127,108 +133,108 @@ html {
 }
 
 .link {
-    color: var(--link-color);
-    text-decoration: underline;
+  color: var(--link-color);
+  text-decoration: underline;
 }
 
 .link:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .paginator {
-    align-items: flex-end;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 2rem;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
 
 ::-webkit-scrollbar {
-    background-color: #FAFAFA;
-    height: 8px;
-    width: 8px;
+  background-color: #fafafa;
+  height: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #AAAAAA;
+  background-color: #aaaaaa;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #888888;
+  background-color: #888888;
 }
 
 /* header */
 
 .logo {
-    font-size: 4rem;
-    border: 1px solid var(--font-color);
-    border-radius: .3rem;
-    padding-right: .2rem;
-    padding-left: .2rem;
-    padding-bottom: .2rem;
-    display: grid;
-    place-items: center;
-    margin-top: 4rem;
-    line-height: 1.1;
+  font-size: 4rem;
+  border: 1px solid var(--font-color);
+  border-radius: 0.3rem;
+  padding-right: 0.2rem;
+  padding-left: 0.2rem;
+  padding-bottom: 0.2rem;
+  display: grid;
+  place-items: center;
+  margin-top: 4rem;
+  line-height: 1.1;
 }
 
 #header {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
-#header>h1 {
-    text-align: center;
+#header > h1 {
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
-    #header>h1 {
-        font-size: 2.8rem;
-    }
+  #header > h1 {
+    font-size: 2.8rem;
+  }
 }
 
-#header>nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 768px;
-    width: 100%;
-    margin-top: 2rem;
+#header > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 768px;
+  width: 100%;
+  margin-top: 2rem;
 }
 
-#header>nav>span>a {
-    font-size: 1.2rem;
+#header > nav > span > a {
+  font-size: 1.2rem;
 }
 
 /* main */
 
 #main {
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    max-width: 768px;
-    padding: 2rem 0;
-    width: calc(100% - 2rem);
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 768px;
+  padding: 2rem 0;
+  width: calc(100% - 2rem);
 }
 
 /* footer */
 
 #footer {
-    align-items: center;
-    display: flex;
-    font-size: .9rem;
-    flex-direction: column;
-    margin-bottom: 2rem;
-    margin-top: 4rem;
+  align-items: center;
+  display: flex;
+  font-size: 0.9rem;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
-#footer>.footnote {
-    text-align: center;
+#footer > .footnote {
+  text-align: center;
 }
 
 #footer :last-child {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
