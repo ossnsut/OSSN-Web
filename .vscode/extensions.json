@@ -1,7 +1,7 @@
 {
-    "recommendations": [
-        "budparr.language-hugo-vscode",
-        "bungcip.better-toml",
-        "davidanson.vscode-markdownlint"
-    ]
+  "recommendations": [
+    "budparr.language-hugo-vscode",
+    "bungcip.better-toml",
+    "davidanson.vscode-markdownlint"
+  ]
 }

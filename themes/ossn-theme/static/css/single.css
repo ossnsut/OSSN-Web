@@ -1,53 +1,53 @@
-#main>h1 {
-    text-align: center;
+#main > h1 {
+  text-align: center;
 }
 
-#main>.content {
-    padding-top: 1rem;
+#main > .content {
+  padding-top: 1rem;
 }
 
-#main>.warning {
-    background-color: brown;
-    color: white;
-    font-size: 1.1rem;
-    margin: 2rem 0;
-    padding: 1rem 0;
-    text-align: center;
+#main > .warning {
+  background-color: brown;
+  color: white;
+  font-size: 1.1rem;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  text-align: center;
 }
 
 #main .toc-wrapper {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 #main .toc {
-    background-color: var(--background-code);
-    border: var(--font-color) 1px dashed;
-    display: inline-block;
-    margin: 1rem;
-    padding: .5rem 1rem;
+  background-color: var(--background-code);
+  border: var(--font-color) 1px dashed;
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 #main .toc a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-#main .toc li>ul {
-    margin-left: 1.5rem;
+#main .toc li > ul {
+  margin-left: 1.5rem;
 }
 
 #main .toc ul {
-    list-style: none;
+  list-style: none;
 }
 
 #main :target {
-    background-color: var(--target-color);
+  background-color: var(--target-color);
 }
 
 #main .footnotes {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .giscus {
-    margin-top: 8rem;
+  margin-top: 8rem;
 }
