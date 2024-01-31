@@ -7,17 +7,8 @@
   <input type="number" id="time_step" name="time_step" value="30" /><br />
   <label for="periods">Periods:</label><br />
   <textarea id="periods" name="periods" rows="4" spellcheck="false">
-(AIML > AI \& ML)[A6-6 B3-3 C3-3]
-(ES > Embedded Systems)[D2-2 B7-7 E2-2]
-(DS > Data Science)[A7-7 B2-2 C2-2]
-(CC > Cloud Computing)[B6-6 D1-1 E3-3]
-(AI \& ML > Lab G1 / G2)[A2-3]
-(ACN > Computer Networks)[C5-5 D3-3 E4-4]
-(Data Science > Lab G1 / G2)[A4-5 D6-7]
-(Cloud Computing > Lab G1 / G2)[B4-5 B8-9]
-(Embedded Systems > Lab G1 / G2)[D4-5]
-(Computer Networks > Lab G1 / G2)[C6-7]</textarea
-  >
+(MA 5101 > Algebra 1) [A1-2 B2-2 D4-5]
+(MA 5102 > Maths 2) [A3-4 B3-4 D4-5]</textarea >
   <br />
   <br />
   <input
@@ -30,9 +21,25 @@
 
 <div>
   <br />
-  <label for="latex-output">LaTeX Output:</label><br />
-  <textarea id="latex-output" rows="8" cols="50" spellcheck="false"></textarea
-  ><br />
+
+  <form action="https://www.overleaf.com/docs" method="post" target="_blank">
+    <label for="latex-output">LaTeX Output:</label><br />
+    <textarea
+      required
+      readonly
+      minlength="1"
+      pattern=".{1,}"
+      name="snip"
+      id="latex-output"
+      rows="8"
+      cols="50"
+      spellcheck="false"
+    ></textarea>
+    <br />
+    <br />
+    <input style="cursor: pointer" type="submit" value="Open in Overleaf" />
+  </form>
+  <br />
 </div>
 
 <!-- markdownlint-disable MD013 MD052-->
