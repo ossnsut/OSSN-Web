@@ -29,7 +29,6 @@ You may want to jump straight to the [timetable generator](#timetable-generator)
 otherwise, here's some background on how I created a general purpose timetable
 generator for my class 😁
 
-
 Download the timetable [here](/pdf/timetable_csiot.pdf) and the period input
 [here](/txt/timetable_csiot.txt).
 
